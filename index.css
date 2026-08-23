@@ -1,0 +1,641 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 80px;
+    background: rgba(5, 5, 5, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.logo,
+.footer-logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #e50914;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #e50914;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 120px 7% 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 50%, #390005 0%, #080808 45%);
+}
+
+.hero-content {
+    width: 50%;
+    z-index: 2;
+}
+
+.hero-small,
+.red-title {
+    color: #e50914;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 85px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.hero h1 span,
+.about h2 span,
+.contact h2 span {
+    color: #e50914;
+}
+
+.hero-text {
+    color: #aaa;
+    max-width: 550px;
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 28px;
+    background: #e50914;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #e50914;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b8060f;
+    transform: translateY(-3px);
+}
+
+.btn-dark {
+    background: transparent;
+}
+
+.btn-dark:hover {
+    background: white;
+    color: black;
+}
+
+.hero-car {
+    position: absolute;
+    width: 58%;
+    right: -5%;
+    bottom: 0;
+}
+
+.hero-car img {
+    width: 100%;
+    display: block;
+    mask-image: linear-gradient(to right, transparent, black 30%);
+}
+
+
+/* ================= CARS ================= */
+
+.cars {
+    padding: 110px 7%;
+    background: #0b0b0b;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #e50914;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    margin-top: 12px;
+}
+
+.section-title h2 span {
+    color: #e50914;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: #111;
+    border: 1px solid #292929;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    border-color: #e50914;
+    box-shadow: 0 15px 40px rgba(229, 9, 20, 0.15);
+}
+
+.car-image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #e50914;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.car-info {
+    padding: 25px;
+}
+
+.car-type {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.car-info h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.specs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: #aaa;
+    font-size: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #292929;
+}
+
+.car-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.car-bottom strong {
+    color: white;
+    font-size: 21px;
+}
+
+.details-btn {
+    background: transparent;
+    color: #e50914;
+    border: 1px solid #e50914;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.details-btn:hover {
+    background: #e50914;
+    color: white;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 120px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    background: #080808;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e50914;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.about-image img {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.about h2,
+.contact h2 {
+    font-size: 48px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.about-content > p:not(.red-title),
+.contact-content p {
+    color: #999;
+    line-height: 1.8;
+}
+
+.advantages {
+    margin-top: 35px;
+}
+
+.advantage {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+}
+
+.adv-icon {
+    color: #e50914;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.advantage h3 {
+    margin-bottom: 8px;
+}
+
+.advantage p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #e50914;
+    padding: 60px 7%;
+    text-align: center;
+}
+
+.stat {
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.stat:last-child {
+    border: none;
+}
+
+.stat strong {
+    font-size: 42px;
+}
+
+.stat p {
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    padding: 120px 7%;
+    background:
+        linear-gradient(rgba(8,8,8,.94), rgba(8,8,8,.94)),
+        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1600&q=80")
+        center / cover;
+}
+
+.contact-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+ 
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact select {
+    width: 100%;
+    padding: 18px;
+    background: #111;
+    color: white;
+    border: 1px solid #333;
+    outline: none;
+}
+
+.contact input:focus,
+.contact select:focus {
+    border-color: #e50914;
+}
+
+.submit-btn {
+    padding: 18px;
+    background: #e50914;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #b8060f;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #050505;
+    padding: 50px 7% 25px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+footer > p {
+    color: #666;
+    margin: 15px 0 25px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.socials a {
+    color: #999;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #e50914;
+}
+
+.copyright {
+    border-top: 1px solid #222;
+    margin-top: 35px;
+    padding-top: 20px;
+    color: #555;
+    font-size: 12px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: 450px;
+    max-width: 100%;
+    background: #111;
+    border: 1px solid #e50914;
+    padding: 45px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content > p:first-of-type {
+    color: #e50914;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #888;
+    line-height: 1.6;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        text-align: center;
+        min-height: 850px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-car {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        opacity: 0.45;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .stat {
+        border: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .cars,
+    .about,
+    .contact {
+        padding: 80px 20px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .section-title h2,
+    .about h2,
+    .contact h2 {
+        font-size: 35px;
+    }
+
+    .stats {
+        padding: 50px 20px;
+    }
+
+    .stat strong {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDLINE AUTO — Автосалон</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Навігація -->
+    <header class="navbar">
+        <div class="logo">
+            <span>RED</span>LINE
+        </div>
+
+        <nav>
+            <a href="#home">Головна</a>
+            <a href="#cars">Автомобілі</a>
+            <a href="#about">Про нас</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-small">REDLINE AUTO</p>
+
+            <h1>
+                Твій автомобіль.
+                <span>Твій стиль.</span>
+            </h1>
+
+            <p class="hero-text">
+                Преміальні автомобілі, спортивний характер
+                та сервіс, якому можна довіряти.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#cars" class="btn">Переглянути авто</a>
+                <a href="#contact" class="btn btn-dark">Зв'язатися</a>
+            </div>
+        </div>
+
+        <div class="hero-car">
+            <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80"
+                 alt="Спортивний автомобіль">
+        </div>
+    </section>
+
+
+    <!-- CARS -->
+    <section class="cars" id="cars">
+
+        <div class="section-title">
+            <p>НАШ АВТОПАРК</p>
+            <h2>Популярні <span>автомобілі</span></h2>
+        </div>
+
+        <div class="cars-grid">
+
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=80"
+                         alt="Mercedes">
+                    <span class="badge">NEW</span>
+                </div>
+
+                <div class="car-info">
+                    <p class="car-type">PREMIUM • 2025</p>
+                    <h3>Mercedes-Benz AMG</h3>
+
+                    <div class="specs">
+                        <span>⚡ 3.0L</span>
+                        <span>🚀 435 к.с.</span>
+                        <span>⚙ Автомат</span>
+                    </div>
+
+                    <div class="car-bottom">
+                        <strong>$89 900</strong>
+                        <button class="details-btn"
+                                data-car="Mercedes-Benz AMG">
+                            Детальніше
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfj-mNrow1jG4vwlgOo2SZ_Y8wewyjl1t7dxqfnNmcfMN1gTqqUTMYe5Q&s=10"
+                         alt="BMW">
+                </div>
+
+                <div class="car-info">
+                    <p class="car-type">SPORT • 2024</p>
+                    <h3>BMW M4 Competition</h3>
+
+                    <div class="specs">
+                        <span>⚡ 3.0L</span>
+                        <span>🚀 510 к.с.</span>
+                        <span>⚙ Автомат</span>
+                    </div>
+
+                    <div class="car-bottom">
+                        <strong>$84 500</strong>
+                        <button class="details-btn"
+                                data-car="BMW M4 Competition">
+                            Детальніше
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80"
+                         alt="Porsche">
+                    <span class="badge">TOP</span>
+                </div>
+
+                <div class="car-info">
+                    <p class="car-type">SPORT • 2025</p>
+                    <h3>Porsche 911 Carrera</h3>
+
+                    <div class="specs">
+                        <span>⚡ 3.0L</span>
+                        <span>🚀 385 к.с.</span>
+                        <span>⚙ PDK</span>
+                    </div>
+
+                    <div class="car-bottom">
+                        <strong>$129 900</strong>
+                        <button class="details-btn"
+                                data-car="Porsche 911 Carrera">
+                            Детальніше
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"
+                 alt="Автомобіль">
+        </div>
+
+        <div class="about-content">
+            <p class="red-title">ЧОМУ REDLINE?</p>
+
+            <h2>
+                Ми продаємо не просто
+                <span>автомобілі.</span>
+            </h2>
+
+            <p>
+                REDLINE AUTO — сучасний автосалон для тих,
+                хто цінує стиль, комфорт та потужність.
+            </p>
+
+            <div class="advantages">
+
+                <div class="advantage">
+                    <div class="adv-icon">01</div>
+                    <div>
+                        <h3>Перевірені авто</h3>
+                        <p>Кожен автомобіль проходить повну перевірку.</p>
+                    </div>
+                </div>
+
+                <div class="advantage">
+                    <div class="adv-icon">02</div>
+                    <div>
+                        <h3>Гарантія</h3>
+                        <p>Надаємо гарантію та підтримку після покупки.</p>
+                    </div>
+                </div>
+
+                <div class="advantage">
+                    <div class="adv-icon">03</div>
+                    <div>
+                        <h3>Вигідні умови</h3>
+                        <p>Кредитування, лізинг та обмін автомобілів.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="stat">
+            <strong>10+</strong>
+            <p>років досвіду</p>
+        </div>
+
+        <div class="stat">
+            <strong>500+</strong>
+            <p>проданих авто</p>
+        </div>
+
+        <div class="stat">
+            <strong>98%</strong>
+            <p>задоволених клієнтів</p>
+        </div>
+
+        <div class="stat">
+            <strong>24/7</strong>
+            <p>підтримка</p>
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="contact-content">
+
+            <div>
+                <p class="red-title">ЗАЛИШИТИ ЗАЯВКУ</p>
+
+                <h2>
+                    Готовий сісти
+                    <span>за кермо?</span>
+                </h2>
+
+                <p>
+                    Заповни форму, і наш менеджер зв'яжеться
+                    з тобою найближчим часом.
+                </p>
+            </div>
+
+            <form id="contactForm">
+
+                <input type="text"
+                       id="name"
+                       placeholder="Ваше ім'я"
+                       required>
+
+                <input type="tel"
+                       id="phone"
+                       placeholder="Номер телефону"
+                       required>
+
+                <select id="carSelect">
+                    <option value="">Оберіть автомобіль</option>
+                    <option>Mercedes-Benz AMG</option>
+                    <option>BMW M4 Competition</option>
+                    <option>Porsche 911 Carrera</option>
+                </select>
+
+                <button type="submit" class="submit-btn">
+                    Надіслати заявку
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            <span>RED</span>LINE
+        </div>
+
+        <p>
+            Преміальні автомобілі для тих,
+            хто обирає більше.
+        </p>
+
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Telegram</a>
+            <a href="#">Facebook</a>
+        </div>
+
+        <div class="copyright">
+            © 2026 REDLINE AUTO. Всі права захищені.
+        </div>
+
+    </footer>
+
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <button class="close" id="closeModal">×</button>
+
+            <p>REDLINE AUTO</p>
+
+            <h2 id="modalTitle">Автомобіль</h2>
+
+            <p>
+                Залиште заявку, щоб отримати більше
+                інформації про цей автомобіль.
+            </p>
+
+            <button class="submit-btn" id="modalButton">
+                Залишити заявку
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

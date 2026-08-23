@@ -1,0 +1,100 @@
+
+// ================= MOBILE MENU =================
+
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.querySelector(".navbar nav");
+
+menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+
+// Закриваємо меню після натискання на пункт
+
+document.querySelectorAll(".navbar nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+});
+
+
+// ================= MODAL =================
+
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalButton = document.getElementById("modalButton");
+
+const detailsButtons = document.querySelectorAll(".details-btn");
+
+detailsButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const carName = button.dataset.car;
+
+        modalTitle.textContent = carName;
+
+        modal.classList.add("active");
+
+    });
+
+});
+
+
+// Закрити модальне вікно
+
+closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+
+// Закрити при кліку за межами
+
+modal.addEventListener("click", (event) => {
+
+    if (event.target === modal) {
+        modal.classList.remove("active");
+    }
+
+});
+
+
+// ================= MODAL BUTTON =================
+
+modalButton.addEventListener("click", () => {
+
+    modal.classList.remove("active");
+
+    document.getElementById("contact").scrollIntoView({
+        behavior: "smooth"
+    });
+
+});
+
+
+// ================= CONTACT FORM =================
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+
+    if (name.trim() === "" || phone.trim() === "") {
+        alert("Будь ласка, заповніть усі поля.");
+        return;
+    }
+
+    alert(
+        `Дякуємо, ${name}!\n\n` +
+        `Вашу заявку прийнято.\n` +
+        `Ми зв'яжемося з вами за номером ${phone}.`
+    );
+
+    form.reset();
+
+});
