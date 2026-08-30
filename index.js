@@ -98,3 +98,28 @@ form.addEventListener("submit", (event) => {
     form.reset();
 
 });
+
+const heroSwiper = new Swiper(".hero-swiper", {
+
+    loop: true,
+
+    speed: 1000,
+
+    effect: "slide",
+
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false
+    },
+
+    navigation: {
+        nextEl: ".hero-next",
+        prevEl: ".hero-prev"
+    },
+
+    pagination: {
+        el: ".hero-pagination",
+        clickable: true
+    }
+
+});

@@ -1,12 +1,16 @@
 
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REDLINE AUTO — Автосалон</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
     <!-- Навігація -->
@@ -27,31 +31,133 @@
 
 
     <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <p class="hero-small">REDLINE AUTO</p>
+   <section class="hero" id="home">
 
-            <h1>
-                Твій автомобіль.
-                <span>Твій стиль.</span>
-            </h1>
+    <div class="hero-swiper swiper">
 
-            <p class="hero-text">
-                Преміальні автомобілі, спортивний характер
-                та сервіс, якому можна довіряти.
-            </p>
+        <div class="swiper-wrapper">
 
-            <div class="hero-buttons">
-                <a href="#cars" class="btn">Переглянути авто</a>
-                <a href="#contact" class="btn btn-dark">Зв'язатися</a>
+            <!-- СЛАЙД 1 -->
+            <div class="swiper-slide hero-slide">
+
+                <div class="hero-content">
+                    <p class="hero-small">REDLINE AUTO</p>
+
+                    <h1>
+                        Твій автомобіль.
+                        <span>Твій стиль.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Преміальні автомобілі, спортивний характер
+                        та сервіс, якому можна довіряти.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#cars" class="btn">
+                            Переглянути авто
+                        </a>
+
+                        <a href="#contact" class="btn btn-dark">
+                            Зв'язатися
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-car">
+                    <img
+                        src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1600&q=90"
+                        alt="Спортивний автомобіль">
+                </div>
+
             </div>
+
+
+            <!-- СЛАЙД 2 -->
+            <div class="swiper-slide hero-slide">
+
+                <div class="hero-content">
+                    <p class="hero-small">REDLINE AUTO</p>
+
+                    <h1>
+                        Потужність.
+                        <span>Без компромісів.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Автомобілі, які дарують емоції
+                        кожного разу, коли ти сідаєш за кермо.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#cars" class="btn">
+                            Переглянути авто
+                        </a>
+
+                        <a href="#contact" class="btn btn-dark">
+                            Зв'язатися
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-car">
+                    <img
+                        src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1600&q=90"
+                        alt="Mercedes AMG">
+                </div>
+
+            </div>
+
+
+            <!-- СЛАЙД 3 -->
+            <div class="swiper-slide hero-slide">
+
+                <div class="hero-content">
+                    <p class="hero-small">REDLINE AUTO</p>
+
+                    <h1>
+                        Створений
+                        <span>для тебе.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Відчуй справжню динаміку,
+                        комфорт та преміальний стиль.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#cars" class="btn">
+                            Переглянути авто
+                        </a>
+
+                        <a href="#contact" class="btn btn-dark">
+                            Зв'язатися
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-car">
+                    <img
+                        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=90"
+                        alt="Porsche">
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="hero-car">
-            <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80"
-                 alt="Спортивний автомобіль">
-        </div>
-    </section>
+
+        <!-- Стрілки -->
+        <div class="hero-prev swiper-button-prev"></div>
+        <div class="hero-next swiper-button-next"></div>
+
+
+        <!-- Точки -->
+        <div class="hero-pagination swiper-pagination"></div>
+
+    </div>
+
+</section>
 
 
     <!-- CARS -->
@@ -67,7 +173,7 @@
             <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=80"
-                         alt="Mercedes">
+                        alt="Mercedes">
                     <span class="badge">NEW</span>
                 </div>
 
@@ -83,8 +189,7 @@
 
                     <div class="car-bottom">
                         <strong>$89 900</strong>
-                        <button class="details-btn"
-                                data-car="Mercedes-Benz AMG">
+                        <button class="details-btn" data-car="Mercedes-Benz AMG">
                             Детальніше
                         </button>
                     </div>
@@ -95,7 +200,7 @@
             <div class="car-card">
                 <div class="car-image">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfj-mNrow1jG4vwlgOo2SZ_Y8wewyjl1t7dxqfnNmcfMN1gTqqUTMYe5Q&s=10"
-                         alt="BMW">
+                        alt="BMW">
                 </div>
 
                 <div class="car-info">
@@ -110,8 +215,7 @@
 
                     <div class="car-bottom">
                         <strong>$84 500</strong>
-                        <button class="details-btn"
-                                data-car="BMW M4 Competition">
+                        <button class="details-btn" data-car="BMW M4 Competition">
                             Детальніше
                         </button>
                     </div>
@@ -122,7 +226,7 @@
             <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80"
-                         alt="Porsche">
+                        alt="Porsche">
                     <span class="badge">TOP</span>
                 </div>
 
@@ -138,8 +242,7 @@
 
                     <div class="car-bottom">
                         <strong>$129 900</strong>
-                        <button class="details-btn"
-                                data-car="Porsche 911 Carrera">
+                        <button class="details-btn" data-car="Porsche 911 Carrera">
                             Детальніше
                         </button>
                     </div>
@@ -155,7 +258,7 @@
 
         <div class="about-image">
             <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"
-                 alt="Автомобіль">
+                alt="Автомобіль">
         </div>
 
         <div class="about-content">
@@ -250,15 +353,9 @@
 
             <form id="contactForm">
 
-                <input type="text"
-                       id="name"
-                       placeholder="Ваше ім'я"
-                       required>
+                <input type="text" id="name" placeholder="Ваше ім'я" required>
 
-                <input type="tel"
-                       id="phone"
-                       placeholder="Номер телефону"
-                       required>
+                <input type="tel" id="phone" placeholder="Номер телефону" required>
 
                 <select id="carSelect">
                     <option value="">Оберіть автомобіль</option>
@@ -281,54 +378,37 @@
     <!-- FOOTER -->
     <footer>
 
-        <div class="footer-logo">
-            <span>RED</span>LINE
-        </div>
 
-        <p>
-            Преміальні автомобілі для тих,
-            хто обирає більше.
-        </p>
-
-        <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">Telegram</a>
-            <a href="#">Facebook</a>
-        </div>
-
-        <div class="copyright">
-            © 2026 REDLINE AUTO. Всі права захищені.
-        </div>
 
     </footer>
 
 
+
     <!-- MODAL -->
     <div class="modal" id="modal">
-
         <div class="modal-content">
-
-            <button class="close" id="closeModal">×</button>
+            <button class="close" id="closeModal">&times;</button>
 
             <p>REDLINE AUTO</p>
 
-            <h2 id="modalTitle">Автомобіль</h2>
+            <h2 id="modalTitle">Назва авто</h2>
 
             <p>
-                Залиште заявку, щоб отримати більше
-                інформації про цей автомобіль.
+                Дякуємо за інтерес до цього автомобіля!
+                Залиште заявку, і наш менеджер зв'яжеться
+                з вами для уточнення деталей та тест-драйву.
             </p>
 
-            <button class="submit-btn" id="modalButton">
+            <button class="submit-btn" id="modalButton" style="margin-top: 25px; width: 100%;">
                 Залишити заявку
             </button>
-
         </div>
-
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
 
 </body>
+
 </html>
