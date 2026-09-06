@@ -965,3 +965,349 @@ footer > p {
     }
 
 }
+/* ========================================
+   REVIEWS
+======================================== */
+
+.reviews {
+    background: #050505;
+    color: #fff;
+    padding: 120px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Червона декоративна лінія */
+
+.reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8%;
+    width: 90px;
+    height: 3px;
+    background: #ed0b16;
+}
+
+
+/* Заголовок */
+
+.reviews-header {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 50px;
+}
+
+
+.reviews-label {
+    color: #ed0b16;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+
+
+.reviews-header h2 {
+    font-size: 58px;
+    line-height: .95;
+    margin: 0;
+
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+
+.reviews-header h2 span {
+    display: block;
+    color: #ed0b16;
+}
+
+
+.reviews-description {
+    max-width: 390px;
+
+    color: #999;
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* Контейнер слайдера */
+
+.reviews-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Картка */
+
+.review-card {
+    background: #0c0c0c;
+    border: 1px solid #222;
+
+    padding: 32px;
+    height: 305px;
+    box-sizing: border-box;
+
+    position: relative;
+    transition: .35s ease;
+}
+
+.review-card:hover {
+    border-color: #ed0b16;
+    transform: translateY(-8px);
+}
+
+/* Верхня частина */
+
+.review-top {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* Аватар */
+
+.review-avatar {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ed0b16;
+
+    color: #fff;
+
+    font-size: 20px;
+    font-weight: 900;
+
+    border-radius: 50%;
+}
+
+
+.review-top h3 {
+    margin: 0 0 5px;
+
+    font-size: 17px;
+}
+
+
+.review-top p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* Зірки */
+
+.review-stars {
+    margin-left: auto;
+
+    color: #ed0b16;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+
+/* Лінія */
+
+.review-line {
+    width: 100%;
+    height: 1px;
+
+    background: #222;
+
+    margin: 25px 0;
+}
+
+
+/* Текст */
+
+.review-text {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+
+    max-height: 145px;
+    overflow: hidden;
+}
+
+/* Автомобіль */
+
+.review-car {
+    position: absolute;
+
+    bottom: 25px;
+    left: 32px;
+    right: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #222;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.review-car span:first-child {
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.review-car span:last-child {
+    color: #ed0b16;
+}
+
+
+/* ========================================
+   КНОПКИ
+======================================== */
+
+.reviews-controls {
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.review-prev,
+.review-next {
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid #333;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.review-prev:hover,
+.review-next:hover {
+    background: #ed0b16;
+    border-color: #ed0b16;
+}
+
+
+/* Точки */
+
+.review-dots {
+    display: flex;
+    gap: 8px;
+}
+
+
+.review-dot {
+    width: 25px;
+    height: 3px;
+
+    background: #333;
+
+    display: block;
+
+    transition: .3s;
+}
+
+
+.review-dot.active {
+    width: 50px;
+
+    background: #ed0b16;
+}
+
+
+/* ========================================
+   АДАПТИВ
+======================================== */
+
+@media (max-width: 900px) {
+
+    .reviews {
+        padding: 90px 5%;
+    }
+
+    .reviews-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .reviews-header h2 {
+        font-size: 48px;
+    }
+
+    .reviews-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        display: none;
+    }
+
+    .review-card.active {
+        display: block;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .reviews-header h2 {
+        font-size: 38px;
+    }
+
+    .reviews {
+        padding: 70px 20px;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
+
+    .review-stars {
+        font-size: 12px;
+    }
+}

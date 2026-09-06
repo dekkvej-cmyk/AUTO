@@ -123,3 +123,76 @@ const heroSwiper = new Swiper(".hero-swiper", {
     }
 
 });
+/* ========================================
+   REVIEWS SLIDER
+======================================== */
+
+const reviews = document.querySelectorAll(".review-card");
+const dots = document.querySelectorAll(".review-dot");
+
+const prevButton = document.getElementById("reviewPrev");
+const nextButton = document.getElementById("reviewNext");
+
+let currentReview = 0;
+
+
+/* Показати відгук */
+
+function showReview(index) {
+
+    reviews.forEach((review) => {
+        review.classList.remove("active");
+    });
+
+    dots.forEach((dot) => {
+        dot.classList.remove("active");
+    });
+
+    reviews[index].classList.add("active");
+    dots[index].classList.add("active");
+}
+
+
+/* Наступний */
+
+nextButton.addEventListener("click", () => {
+
+    currentReview++;
+
+    if (currentReview >= reviews.length) {
+        currentReview = 0;
+    }
+
+    showReview(currentReview);
+
+});
+
+
+/* Попередній */
+
+prevButton.addEventListener("click", () => {
+
+    currentReview--;
+
+    if (currentReview < 0) {
+        currentReview = reviews.length - 1;
+    }
+
+    showReview(currentReview);
+
+});
+
+
+/* Клік по точках */
+
+dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        currentReview = index;
+
+        showReview(currentReview);
+
+    });
+
+});
