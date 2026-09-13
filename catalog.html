@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REDLINE AUTO — Автосалон</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="catalog.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -27,6 +27,296 @@
 
         <button class="menu-btn" id="menuBtn">☰</button>
     </header>
+    <section class="catalog">
+
+        <!-- Заголовок -->
+
+        <div class="catalog-title">
+            <p>REDLINE AUTO</p>
+
+            <h1>
+                ОБЕРИ СВОЄ
+                <span>АВТО</span>
+            </h1>
+
+            <div class="line"></div>
+        </div>
+
+
+        <!-- Фільтри -->
+
+        <div class="filters">
+
+            <div class="filter">
+                <label>Марка</label>
+
+                <select id="brandFilter">
+                    <option value="all">Усі марки</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes-Benz</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Porsche">Porsche</option>
+                </select>
+            </div>
+
+
+            <div class="filter">
+                <label>Тип кузова</label>
+
+                <select id="typeFilter">
+                    <option value="all">Усі типи</option>
+                    <option value="sedan">Седан</option>
+                    <option value="coupe">Купе</option>
+                    <option value="suv">SUV</option>
+                    <option value="sport">Спорткар</option>
+                </select>
+            </div>
+
+
+            <div class="filter">
+                <label>Ціна</label>
+
+                <select id="priceFilter">
+                    <option value="all">Будь-яка</option>
+                    <option value="50000">До $50 000</option>
+                    <option value="100000">До $100 000</option>
+                    <option value="150000">До $150 000</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <!-- Каталог автомобілів -->
+
+        <div class="cars-grid">
+
+
+            <!-- BMW -->
+
+            <div class="car-card" data-brand="BMW" data-type="sedan" data-price="65000">
+
+                <div class="car-image">
+
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80"
+                        alt="BMW M5">
+
+                    <span>В НАЯВНОСТІ</span>
+
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">BMW</p>
+
+                    <h2>M5 Competition</h2>
+
+                    <div class="details">
+                        <p>4.4 V8</p>
+                        <p>625 к.с.</p>
+                        <p>Автомат</p>
+                    </div>
+
+                    <div class="bottom">
+
+                        <div class="price">
+                            <small>Ціна</small>
+                            <strong>$65 000</strong>
+                        </div>
+
+                        <button class="choose-btn" data-name="BMW M5 Competition" data-price="$65 000"
+                            data-info="4.4 V8 • 625 к.с. • Автомат">
+
+                            Обрати
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mercedes -->
+
+            <div class="car-card" data-brand="Mercedes" data-type="coupe" data-price="89000">
+
+                <div class="car-image">
+
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1200&q=80"
+                        alt="Mercedes AMG GT">
+
+                    <span>В НАЯВНОСТІ</span>
+
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">MERCEDES-BENZ</p>
+
+                    <h2>AMG GT</h2>
+
+                    <div class="details">
+                        <p>4.0 V8</p>
+                        <p>585 к.с.</p>
+                        <p>Автомат</p>
+                    </div>
+
+                    <div class="bottom">
+
+                        <div class="price">
+                            <small>Ціна</small>
+                            <strong>$89 000</strong>
+                        </div>
+
+                        <button class="choose-btn" data-name="Mercedes-AMG GT" data-price="$89 000"
+                            data-info="4.0 V8 • 585 к.с. • Автомат">
+
+                            Обрати
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Audi -->
+
+            <div class="car-card" data-brand="Audi" data-type="suv" data-price="72000">
+
+                <div class="car-image">
+
+                    <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=80"
+                        alt="Audi RS Q8">
+
+                    <span>В НАЯВНОСТІ</span>
+
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">AUDI</p>
+
+                    <h2>RS Q8</h2>
+
+                    <div class="details">
+                        <p>4.0 V8</p>
+                        <p>600 к.с.</p>
+                        <p>Quattro</p>
+                    </div>
+
+                    <div class="bottom">
+
+                        <div class="price">
+                            <small>Ціна</small>
+                            <strong>$72 000</strong>
+                        </div>
+
+                        <button class="choose-btn" data-name="Audi RS Q8" data-price="$72 000"
+                            data-info="4.0 V8 • 600 к.с. • Quattro">
+
+                            Обрати
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Porsche -->
+
+            <div class="car-card" data-brand="Porsche" data-type="sport" data-price="135000">
+
+                <div class="car-image">
+
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
+                        alt="Porsche 911">
+
+                    <span>В НАЯВНОСТІ</span>
+
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">PORSCHE</p>
+
+                    <h2>911 Carrera</h2>
+
+                    <div class="details">
+                        <p>3.0 Turbo</p>
+                        <p>450 к.с.</p>
+                        <p>PDK</p>
+                    </div>
+
+                    <div class="bottom">
+
+                        <div class="price">
+                            <small>Ціна</small>
+                            <strong>$135 000</strong>
+                        </div>
+
+                        <button class="choose-btn" data-name="Porsche 911 Carrera" data-price="$135 000"
+                            data-info="3.0 Turbo • 450 к.с. • PDK">
+
+                            Обрати
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Немає результатів -->
+
+        <div id="noCars">
+            <h2>Автомобілів не знайдено</h2>
+            <p>Зміни параметри фільтра.</p>
+        </div>
+
+    </section>
+
+
+    <!-- Вікно після вибору -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-box">
+
+            <button id="closeModal">×</button>
+
+            <p>ТВІЙ ВИБІР</p>
+
+            <h2 id="modalName"></h2>
+
+            <div class="modal-line"></div>
+
+            <span id="modalInfo"></span>
+
+            <strong id="modalPrice"></strong>
+
+            <button class="contact">
+                Зв'язатися щодо авто
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="catalog.js"></script>
+
     <!-- CONTACT -->
     <section class="contact" id="contact">
 
