@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDLINE AUTO — Автосалон</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Навігація -->
+    <header class="navbar">
+        <div class="logo">
+            <span>RED</span>LINE
+        </div>
+
+        <nav>
+            <a href="#home">Головна</a>
+            <a href="#cars">Автомобілі</a>
+            <a href="#about">Про нас</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </header>
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="contact-content">
+
+            <div>
+                <p class="red-title">ЗАЛИШИТИ ЗАЯВКУ</p>
+
+                <h2>
+                    Готовий сісти
+                    <span>за кермо?</span>
+                </h2>
+
+                <p>
+                    Заповни форму, і наш менеджер зв'яжеться
+                    з тобою найближчим часом.
+                </p>
+            </div>
+
+            <form id="contactForm">
+
+                <input type="text" id="name" placeholder="Ваше ім'я" required>
+
+                <input type="tel" id="phone" placeholder="Номер телефону" required>
+
+                <select id="carSelect">
+                    <option value="">Оберіть автомобіль</option>
+                    <option>Mercedes-Benz AMG</option>
+                    <option>BMW M4 Competition</option>
+                    <option>Porsche 911 Carrera</option>
+                </select>
+
+                <button type="submit" class="submit-btn">
+                    Надіслати заявку
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+</body>
+
+</html>
