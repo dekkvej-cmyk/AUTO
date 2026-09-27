@@ -1,4 +1,4 @@
- *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1209,6 +1209,8 @@ footer > p {
 
 .review-prev,
 .review-next {
+    display: none;
+
     width: 48px;
     height: 48px;
 
@@ -1289,6 +1291,13 @@ footer > p {
 
     .review-card.active {
         display: block;
+    }
+
+    .review-prev,
+    .review-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
